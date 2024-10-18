@@ -1,3 +1,6 @@
+import game.CheatingExecutioner;
+import game.Executioner;
+import game.Guesser;
 import game.HangmanGame;
 import game.HangmanGameAutoGuesser;
 import game.HangmanGameCheatingComputer;
@@ -19,8 +22,11 @@ public class Main {
 
 
     public static void main (String[] args) {
-        //new HangmanGameInteractiveGuesser(new HangmanDictionary(DICTIONARY), NUM_LETTERS, NUM_MISSES).play();
-        //new HangmanGameAutoGuesser(new HangmanDictionary(DICTIONARY), NUM_LETTERS, NUM_MISSES).play();
-    	new HangmanGameCheatingComputer(new HangmanDictionary(DICTIONARY), NUM_LETTERS, NUM_MISSES).play();
+    	Guesser guesser = new Guesser(NUM_MISSES);
+    	Executioner executioner = new CheatingExecutioner(new HangmanDictionary(DICTIONARY), NUM_LETTERS);
+    	new HangmanGame(executioner, guesser).play();
+//        new HangmanGameInteractiveGuesser(new HangmanDictionary(DICTIONARY), NUM_LETTERS, NUM_MISSES).play();
+//        new HangmanGameAutoGuesser(new HangmanDictionary(DICTIONARY), NUM_LETTERS, NUM_MISSES).play();
+//    	new HangmanGameCheatingComputer(new HangmanDictionary(DICTIONARY), NUM_LETTERS, NUM_MISSES).play();
     }
 }
