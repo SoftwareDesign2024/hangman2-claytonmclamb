@@ -35,9 +35,7 @@ public class Executioner {
     	String display = myDisplayWord.toString().replace(" ", "");
     	return display.equals(mySecretWord);
     }
-    
-    public void cheat(char guess) {}
-    
+        
     public String getSecretWord(){
     	// returns the secret word
     	return mySecretWord;
