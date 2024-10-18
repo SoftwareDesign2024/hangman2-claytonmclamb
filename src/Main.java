@@ -1,3 +1,4 @@
+import game.AutoGuesser;
 import game.CheatingExecutioner;
 import game.Executioner;
 import game.Guesser;
@@ -22,7 +23,7 @@ public class Main {
 
 
     public static void main (String[] args) {
-    	Guesser guesser = new Guesser(NUM_MISSES);
+    	Guesser guesser = new AutoGuesser(NUM_MISSES);
     	Executioner executioner = new CheatingExecutioner(new HangmanDictionary(DICTIONARY), NUM_LETTERS);
     	new HangmanGame(executioner, guesser).play();
 //        new HangmanGameInteractiveGuesser(new HangmanDictionary(DICTIONARY), NUM_LETTERS, NUM_MISSES).play();

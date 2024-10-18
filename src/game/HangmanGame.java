@@ -37,7 +37,7 @@ public class HangmanGame {
         boolean gameOver = false;
         while (!gameOver) {
             printStatus();
-
+//            System.out.println(executioner.getSecretWord());
             String guess = guesser.createGuess();
             if (guess.length() == 1 && Character.isAlphabetic(guess.charAt(0))) {
                 guesser.makeGuess(guess.toLowerCase().charAt(0), executioner);

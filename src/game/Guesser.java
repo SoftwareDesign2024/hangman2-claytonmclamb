@@ -19,7 +19,7 @@ public class Guesser {
     // Process a guess by updating the necessary internal state.
     public void makeGuess(char guess, Executioner executioner) {
         // do not count repeated guess as a miss
-    	executioner.cheat(guess);
+//    	executioner.cheat(guess);
         int index = myLettersLeftToGuess.indexOf("" + guess);
         if (index >= 0) {
             recordGuess(index);

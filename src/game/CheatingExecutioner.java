@@ -21,6 +21,11 @@ public class CheatingExecutioner extends Executioner {
 	}   
 	
 	@Override
+	public boolean checkGuessInSecret(char guess) {
+		cheat(guess);
+		return super.checkGuessInSecret(guess);
+	}
+	
 	public void cheat(char guess) {
         // create template of guesses and find one with most matching remaining words
 		// new cheating behavior
