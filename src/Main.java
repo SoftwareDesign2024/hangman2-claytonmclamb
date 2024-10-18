@@ -15,6 +15,7 @@ import util.HangmanDictionary;
  * @author Mac Mason
  * @author Robert C. Duvall
  * @author Shannon Duvall
+ * Clayton McLamb
  */
 public class Main {
     public static final String DICTIONARY = "data/lowerwords.txt";
